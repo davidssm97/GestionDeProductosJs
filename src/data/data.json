@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Café Espresso",
+        "description": "Un café espresso fuerte y aromático.",
+        "price": 2.50,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Café Latte",
+        "description": "Café con leche vaporizada y un toque de espuma.",
+        "price": 3.00,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Tarta de Chocolate",
+        "description": "Deliciosa tarta de chocolate con base crujiente.",
+        "price": 4.00,
+        "category": "Postres"
+    },
+    {
+        "name": "Ensalada César",
+        "description": "Ensalada fresca con pollo, queso parmesano y croutons.",
+        "price": 5.50,
+        "category": "Entrantes"
+    },
+    {
+        "name": "Hamburguesa Clásica",
+        "description": "Hamburguesa con carne de res, lechuga, tomate y cebolla.",
+        "price": 6.00,
+        "category": "Platos Principales"
+    },
+    {
+        "name": "Pizza Margarita",
+        "description": "Pizza con salsa de tomate, mozzarella y albahaca.",
+        "price": 7.00,
+        "category": "Platos Principales"
+    },
+    {
+        "name": "Sopa de Tomate",
+        "description": "Sopa cremosa de tomate con albahaca.",
+        "price": 3.50,
+        "category": "Entrantes"
+    },
+    {
+        "name": "Tiramisu",
+        "description": "Postre italiano con capas de café y mascarpone.",
+        "price": 4.50,
+        "category": "Postres"
+    },
+    {
+        "name": "Batido de Fresa",
+        "description": "Batido cremoso de fresas frescas.",
+        "price": 3.50,
+        "category": "Bebidas"
+    },
+    {
+        "name": "Pasta Alfredo",
+        "description": "Pasta con salsa cremosa de queso parmesano.",
+        "price": 8.00,
+        "category": "Platos Principales"
+    }
+]
