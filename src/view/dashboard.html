@@ -1,35 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <!-- Conexión con fuentes externas para mejorar la tipografía -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet" />
+    
+    <!-- Estilo personalizado para la página -->
+    <link rel="stylesheet" href="../view/style.css" />
+    
+    <!-- Título de la pestaña del navegador -->
     <title>Panel de Control</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="dashboard">
-        <h1>Panel de Control</h1>
-        <button id="logoutBtn">Cerrar Sesión</button>
-        <div id="productFilters">
-            <input type="text" id="filterName" placeholder="Buscar por nombre">
-            <input type="text" id="filterCategory" placeholder="Buscar por categoría">
-            <input type="text" id="filterPriceRange" placeholder="Rango de precio (min-max)">
-            <button id="filterBtn">Filtrar</button>
-        </div>
-        <table id="productTable">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Descripción</th>
-                    <th>Precio</th>
-                    <th>Categoría</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Los productos se cargarán aquí -->
-            </tbody>
-        </table>
+    <!-- Contenedor de fondo con formas decorativas -->
+    <div class="background">
+        <!-- Primer forma decorativa -->
+        <div class="shape"></div>
+        <!-- Segunda forma decorativa -->
+        <div class="shape"></div>
     </div>
-    <script src="../controllers/dashboard.js"></script>
+    
+    <!-- Contenedor principal del panel de control -->
+    <div class="dashboard">
+        <!-- Título del panel de control -->
+        <h1>Panel de Control</h1>
+
+        <!-- Contenedor de filtros para la lista de productos -->
+        <div id="filtersContainer" class="filters-container">
+
+            <!-- Campo de búsqueda por nombre -->
+            <input type="text" id="filterNameInput" placeholder="Buscar por nombre..." class="filter-input">
+
+            <!-- Menú desplegable para seleccionar la categoría -->
+            <select id="filterCategoryInput" class="filter-input">
+
+                <option value="">Seleccionar Categoría</option>
+                <!-- Opciones generadas dinámicamente en JavaScript -->
+            </select>
+            <!-- Campo para ingresar el precio mínimo -->
+            <input type="number" id="minPriceInput" placeholder="Precio mínimo" class="filter-input">
+
+            <!-- Campo para ingresar el precio máximo -->
+            <input type="number" id="maxPriceInput" placeholder="Precio máximo" class="filter-input">
+            
+            <!-- Botón para aplicar los filtros -->
+            <button id="applyFiltersButton" class="filter-button">Aplicar Filtros</button>
+        </div>
+        
+        <!-- Contenedor donde se mostrarán los productos filtrados -->
+        <div id="productList" class="product-list"></div>
+        
+        <!-- Contenedor para el botón de cerrar sesión -->
+        <div id="logoutContainer">
+            <button id="logout" class="logout-button">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <!-- Inclusión del archivo JavaScript para manejar la lógica del panel de control -->
+    <script type="module" src="../controllers/dashboard.js" defer></script>
+
 </body>
 </html>

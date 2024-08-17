@@ -1,83 +1,239 @@
+/* Reset de márgenes y paddings para todos los elementos */
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de color */
+:root {
+  --primary-color: #3498db; /* Color principal */
+  --secondary-color: #2ecc71; /* Color secundario */
+  --background-color: #262626; /* Color de fondo */
+  --text-color: #2c3e50; /* Color del texto */
+}
+
+/* Estilo global del body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+
+  background-color: var(--background-color); /* Fondo del body */
+  color: var(--text-color); /* Color del texto */
+  font-family: 'Poppins', sans-serif; /* Fuente del texto */
+  height: 100vh; /* Altura completa del viewport */
+  display: flex; /* Usar flexbox para centrar contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
 }
 
-#authContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
+/* Estilo para el contenedor del formulario de autenticación */
+.auth-container {
+  width: 360px;
+  padding: 40px 30px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
+/* Estilo para el formulario de registro */
+.registro h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #ffffff;
 }
 
-button:hover {
-    background-color: #0056b3;
+.registro input,
+.registro select {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  background-color: #262626;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #e5e5e5;
+  transition: border-color 0.3s;
 }
 
-form {
-    background-color: white;
+.registro input:focus,
+.registro select:focus {
+  border-color: #ff512f; /* Cambia el color del borde al enfocar el input o select */
+}
+
+::placeholder {
+  color: #a5a5a5; /* Color del texto de los placeholders */
+}
+
+/* Estilo para los botones en el formulario de registro */
+.registro button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  background-color: #ff512f;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registro button:hover {
+  background-color: #e64a19; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+.registro p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #b5b5b5;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.registro p:hover {
+  color: #ff512f; /* Cambia el color del texto al pasar el cursor sobre el párrafo */
+}
+
+/* Estilo para el panel de control */
+.dashboard {
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  text-align: center;
+}
+
+.dashboard h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* Estilo para el botón de cerrar sesión en el panel de control */
+.dashboard #logout {
+  background-color: #ff512f;
+  color: #ffffff;
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dashboard #logout:hover {
+  background-color: #e64a19; /* Cambia el color de fondo al pasar el cursor sobre el botón */
+}
+
+/* Estilo para la lista de productos */
+.product-list {
+  margin-top: 30px;
+}
+
+/* Estilo para cada producto en la lista */
+.product {
+  background-color: #262626;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Estilo para el contenedor de filtros */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para los inputs de filtro */
+.filter-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+}
+
+/* Estilo para los botones de filtro */
+.filter-button {
+  background-color: #ff512f;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Estilo adicional para los productos en la lista (opcional) */
+.product-list .product {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+/* Estilo para el botón de cerrar sesión */
+.logout-button {
+  margin-top: 30px;
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+/* Estilo para el contenedor de detalles del producto */
+.product-details {
+    background-color: #262626;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form input, form select {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-}
-
-form button:hover {
-    background-color: #0056b3;
-}
-
-#dashboard {
+    border-radius: 8px;
     text-align: center;
-    margin: 20px;
-}
+    color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
 
-#productFilters {
+
+/* Estilo para el contenedor de los elementos dentro de los detalles del producto */
+.productDetail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
-#productFilters input {
-    margin: 5px;
+/* Estilo para el botón de volver a la lista */
+.btn-back {
+    background-color: #ff512f;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto; /* Centra el botón horizontalmente */
 }
 
-#productTable {
-    width: 100%;
-    border-collapse: collapse;
+.btn-back:hover {
+    background-color: #e64a19; /* Un tono más oscuro del color principal para el hover */
 }
 
-#productTable th, #productTable td {
-    border: 1px solid #ddd;
-    padding: 8px;
+/* Estilo para las imágenes del producto */
+.product-image {
+  display: block;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  max-width: 100%; /* Asegúrate de que la imagen no se salga del contenedor */
+  height: auto; /* Mantén la proporción de la imagen */
 }
 
-#productTable th {
-    background-color: #007bff;
-    color: white;
-}
+/* Importar la fuente Poppins desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');

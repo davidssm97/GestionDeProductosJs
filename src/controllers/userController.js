@@ -1,61 +1,101 @@
-import Usuario from '../modelos/usuariosModelo.js';
+import { registerUser, findUser } from '../models/userModel.js';
 
-const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+document.addEventListener('DOMContentLoaded', function () {
+    // Obtener referencias a los elementos del DOM
+    const formRegister = document.getElementById('formRegister');
+    const formLogin = document.getElementById('formLogin');
+    const createUserButton = document.getElementById('createUser');
+    const loginUserButton = document.getElementById('loginUser');
+    const showFormLogin = document.getElementById('showFormLogin');
+    const showFormRegister = document.getElementById('showFormRegister');
+    const authContainer = document.getElementById('authContainer');
 
-// Mostrar y ocultar formularios
-document.getElementById('loginBtn').addEventListener('click', () => {
-    document.getElementById('loginForm').style.display = 'block';
-    document.getElementById('registerForm').style.display = 'none';
-});
 
-document.getElementById('registerBtn').addEventListener('click', () => {
-    document.getElementById('registerForm').style.display = 'block';
-    document.getElementById('loginForm').style.display = 'none';
-});
+    // Cambiar al formulario de inicio de sesión cuando se haga clic en "Iniciar Sesión"
+    if (showFormLogin) {
+        showFormLogin.addEventListener('click', function () {
+            formRegister.style.display = 'none'; // Ocultar el formulario de registro
+            formLogin.style.display = 'block'; // Mostrar el formulario de inicio de sesión
+        });
+    }
 
-// Validaciones de formularios y registro de usuarios
-document.getElementById('registerFormElement').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
-    const role = document.getElementById('role').value;
+    // Cambiar al formulario de registro cuando se haga clic en "Registrarse"
+    if (showFormRegister) {
+        showFormRegister.addEventListener('click', function () {
+            formLogin.style.display = 'none'; // Ocultar el formulario de inicio de sesión
+            formRegister.style.display = 'block'; // Mostrar el formulario de registro
+        });
+    }
 
-    if (validateEmail(email) && validatePassword(password)) {
-        const usuario = new Usuario(name, email, password, role);
-        usuarios.push(usuario);
-        localStorage.setItem('usuarios', JSON.stringify(usuarios));
-        alert('Registro exitoso');
-        window.location.href = 'src/view/dashboard.html';
-    } else {
-        alert('Por favor, corrige los errores en el formulario.');
+    // Manejar el registro de usuario
+    if (createUserButton) {
+        createUserButton.addEventListener('click', function () {
+            const name = document.getElementById('r-name').value.trim();
+            const email = document.getElementById('r-email').value.trim();
+            const password = document.getElementById('r-password').value.trim();
+            const phone = document.getElementById('r-phone').value.trim();
+            const rol = document.getElementById('r-rol').value.trim();
+
+            if (!name || !email || !password || !phone || !rol) {
+                alert("Todos los campos son obligatorios.");
+                return;
+            }
+
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                alert("Por favor, ingrese un email válido.");
+                return;
+            }
+
+            if (password.length < 8) {
+                alert("La contraseña debe tener al menos 8 caracteres.");
+                return;
+            }
+
+            const phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Por favor, ingrese un número de teléfono válido (solo dígitos, de 10 caracteres).");
+                return;
+            }
+
+            const newUser = {
+                name: name,
+                email: email,
+                password: password,
+                phone: phone,
+                rol: rol
+            };
+
+            try {
+                registerUser(newUser);
+                alert("Usuario registrado con éxito.");
+                formRegister.reset();
+            } catch (error) {
+                alert(error.message);
+            }
+        });
+    }
+
+    // Manejar el inicio de sesión del usuario
+    if (loginUserButton) {
+        loginUserButton.addEventListener('click', function () {
+            const email = document.getElementById('l-email').value.trim();
+            const password = document.getElementById('l-password').value.trim();
+            const rol = document.getElementById('l-rol').value.trim();
+
+            if (!email || !password || !rol) {
+                alert("Todos los campos son obligatorios.");
+                return;
+            }
+
+            const user = findUser(email, password, rol);
+            if (!user) {
+                alert("Email o contraseña incorrectos.");
+                return;
+            }
+
+            localStorage.setItem('loggedInUser', JSON.stringify(user));
+            window.location.href = 'src/view/dashboard.html';
+        });
     }
 });
-
-// Inicio de sesión
-document.getElementById('loginFormElement').addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.getElementById('loginEmail').value;
-    const password = document.getElementById('loginPassword').value;
-
-    const usuario = usuarios.find(user => user.email === email && user.password === password);
-
-    if (usuario) {
-        alert('Inicio de sesión exitoso');
-        window.location.href = 'src/view/dashboard.html';
-    } else {
-        alert('Credenciales incorrectas');
-    }
-});
-
-// Funciones de validación
-function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-function validatePassword(password) {
-    // Contraseña debe tener al menos 6 caracteres, una letra mayúscula, una minúscula y un número
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/;
-    return passwordRegex.test(password);
-}
