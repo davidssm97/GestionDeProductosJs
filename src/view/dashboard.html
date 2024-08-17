@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dashboard">
+        <h1>Panel de Control</h1>
+        <button id="logoutBtn">Cerrar Sesión</button>
+        <div id="productFilters">
+            <input type="text" id="filterName" placeholder="Buscar por nombre">
+            <input type="text" id="filterCategory" placeholder="Buscar por categoría">
+            <input type="text" id="filterPriceRange" placeholder="Rango de precio (min-max)">
+            <button id="filterBtn">Filtrar</button>
+        </div>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Categoría</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los productos se cargarán aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../controllers/dashboard.js"></script>
+</body>
+</html>
