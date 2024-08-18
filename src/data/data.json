@@ -1,122 +1,122 @@
 [
     {
         "id": "1",
-        "name": "Smartphone Vivo X100",
-        "description": "Smartphone con pantalla OLED de 6.5\", 128GB de almacenamiento",
-        "price": 799000,
-        "category": "Smartphones",
-        "url":"https://www.undertec.store/wp-content/uploads/2024/04/VIVO-X100.webp"
+        "name": "Balón de Fútbol Adidas",
+        "description": "Balón de fútbol profesional, tamaño 5, ideal para césped natural",
+        "price": 80000,
+        "category": "Fútbol",
+        "url": "https://i.imgur.com/xsJ0RDe.jpg"
     },
     {
         "id": "2",
-        "name": "Laptop Asus Pro 15",
-        "description": "Laptop con procesador i7, 16GB RAM, 512GB SSD",
-        "price": 1200000,
-        "category": "Laptops",
-        "url": "https://www.asus.com/media/global/products/lrBdwsJWLnCedonx/P_setting_fff_1_90_end_500.png"
+        "name": "Raqueta de Tenis Wilson Pro Staff",
+        "description": "Raqueta de tenis de alta gama, utilizada por jugadores profesionales",
+        "price": 600000,
+        "category": "Tenis",
+        "url": "https://i.imgur.com/RqxXS8V.jpg"
     },
     {
         "id": "3",
-        "name": "Tablet Samsung S8",
-        "description": "Tablet de 10\" con 64GB de almacenamiento y soporte para lápiz digital",
+        "name": "Zapatillas de Running Nike Air Zoom",
+        "description": "Zapatillas ligeras y cómodas, diseñadas para largas distancias",
         "price": 350000,
-        "category": "Tablets",
-        "url": "https://m.media-amazon.com/images/I/41uE8e4JzbL.jpg"
+        "category": "Running",
+        "url": "https://i.imgur.com/PGRj7Qk.jpg"
     },
     {
         "id": "4",
-        "name": "Smartwatch Blulory G5",
-        "description": "Reloj inteligente con monitor de ritmo cardíaco y GPS",
-        "price": 199000,
-        "category": "Wearables",
-        "url": "https://http2.mlstatic.com/D_Q_NP_693560-MLU73438921824_122023-O.webp"
+        "name": "Guantes de Boxeo Everlast",
+        "description": "Guantes de boxeo de cuero, adecuados para entrenamientos y combates",
+        "price": 150000,
+        "category": "Boxeo",
+        "url": "https://i.imgur.com/cbLVCf8.jpg"
     },
     {
         "id": "5",
-        "name": "Auriculares Motorola ANC 500",
-        "description": "Auriculares con cancelación activa de ruido y sonido Hi-Fi",
-        "price": 150000,
-        "category": "Audio",
-        "url": "https://images.fravega.com/f500/4733c5272ae753c05977c2b877a1f7aa.jpg"
+        "name": "Bicicleta de Montaña Trek Marlin 7",
+        "description": "Bicicleta de montaña con cuadro de aluminio y suspensión delantera",
+        "price": 1500000,
+        "category": "Ciclismo",
+        "url": "https://i.imgur.com/XBNtpiC.jpg"
     },
     {
         "id": "6",
-        "name": "Monitor UHD 4K Ultra",
-        "description": "Monitor de 27\" con resolución 4K y 144Hz",
-        "price": 450000,
-        "category": "Monitores",
-        "url": "https://tiendaakiba.com/wp-content/uploads/monitor-lg-27up650-w-ultra-hd-4k-27-foto-1-1.webp"
+        "name": "Tabla de Surf",
+        "description": "Tabla de surf para principiantes, ligera y resistente",
+        "price": 500000,
+        "category": "Surf",
+        "url": "https://i.imgur.com/FVdNz59.jpg"
     },
     {
         "id": "7",
-        "name": "Teclado Gamer Mecánico MX",
-        "description": "Teclado mecánico RGB con switches Cherry MX Red",
-        "price": 1200000,
-        "category": "Accesorios",
-        "url": "https://resources.sears.com.mx/medios-plazavip/mkt/638ba423627ed_7502266679790-g-3jpg.jpg?scale=500&qlty=75"
+        "name": "Saco de Dormir Coleman",
+        "description": "Saco de dormir resistente al agua, ideal para camping en climas fríos",
+        "price": 120000,
+        "category": "Camping",
+        "url": "https://i.imgur.com/Cmyd1Fv.jpg"
     },
     {
         "id": "8",
-        "name": "Mouse Gaming Z9",
-        "description": "Mouse para gaming con sensor óptico de 16000 DPI",
-        "price": 80000,
-        "category": "Accesorios",
-        "url": "https://static.wixstatic.com/media/d5f7c0_77cecbb4aef04aa49759e4659769dcd3~mv2.jpeg/v1/fit/w_500,h_500,q_90/file.jpg"
+        "name": "Pelota de Baloncesto Spalding",
+        "description": "Pelota de baloncesto oficial de la NBA, material de alta durabilidad",
+        "price": 90000,
+        "category": "Baloncesto",
+        "url": "https://i.imgur.com/jT5lOti.jpg"
     },
     {
         "id": "9",
-        "name": "Cámara DSLR X600",
-        "description": "Cámara digital SLR con sensor de 24.2MP y grabación 4K",
-        "price": 900000,
-        "category": "Cámaras",
-        "url": "https://www.cetrogar.com.ar/media/catalog/product/f/t/ft1998_l_9.png?quality=80&bg-color=255,255,255&fit=bounds&height=500&width=500&canvas=500:500"
+        "name": "Patineta Element",
+        "description": "Patineta profesional, perfecta para trucos y skatepark",
+        "price": 300000,
+        "category": "Skate",
+        "url": "https://i.imgur.com/TaSxIuq.jpg"
     },
     {
         "id": "10",
-        "name": "Impresora Láser L200",
-        "description": "Impresora láser monocromática con conectividad Wi-Fi",
-        "price": 180000,
-        "category": "Impresoras",
-        "url": "https://intercompras.com/images/product/EPSON_BUNDLE_L200___CC.jpg"
+        "name": "Set de Pesas Hexagonales",
+        "description": "Set de pesas hexagonales, incluye 2 pesas de 10 kg cada una",
+        "price": 200000,
+        "category": "Fitness",
+        "url": "https://i.imgur.com/sxzSR3n.jpg"
     },
     {
         "id": "11",
-        "name": "Altavoz Bluetooth Boom",
-        "description": "Altavoz portátil con sonido estéreo y resistencia al agua IPX7",
-        "price": 100000,
-        "category": "Audio",
-        "url": "https://http2.mlstatic.com/D_NQ_NP_977797-MCO49295120322_032022-O.webp"
+        "name": "Casco de Ciclismo Giro",
+        "description": "Casco de ciclismo ultraligero con ventilación mejorada",
+        "price": 150000,
+        "category": "Ciclismo",
+        "url": "https://i.imgur.com/QTIxLk3.jpg"
     },
     {
         "id": "12",
-        "name": "Router WiFi 6 Max",
-        "description": "Router con soporte WiFi 6 y velocidad hasta 9.6Gbps",
-        "price": 220000,
-        "category": "Redes",
-        "url": "https://content.oppictures.com/Master_Images/Master_Variants/Variant_500/735243.jpg"
+        "name": "Red de Voleibol Portátil",
+        "description": "Red de voleibol fácil de instalar, perfecta para juegos al aire libre",
+        "price": 100000,
+        "category": "Voleibol",
+        "url": "https://i.imgur.com/yBDyT1K.jpg"
     },
     {
         "id": "13",
-        "name": "SSD Samsung Externo 1TB",
-        "description": "Disco SSD externo de 1TB con conectividad USB 3.2",
-        "price": 150000,
-        "category": "Almacenamiento",
-        "url": "https://http2.mlstatic.com/D_Q_NP_995342-MLA47576633927_092021-O.webp"
+        "name": "Mochila de Senderismo The North Face",
+        "description": "Mochila de senderismo con múltiples compartimentos y soporte lumbar",
+        "price": 180000,
+        "category": "Senderismo",
+        "url": "https://i.imgur.com/yRmKEP1.jpg"
     },
     {
         "id": "14",
-        "name": "TV 55\" 4K UHD",
-        "description": "Televisor inteligente de 55\" con resolución 4K y HDR",
-        "price": 700000,
-        "category": "Televisores",
-        "url": "https://image.made-in-china.com/2f0j00VhEkMpUdbjcz/55-Inch-Smart-TV-4K-Ultra-HD-Flat-Screen-Televisores-Smart-TV-Smart-Television-Smart-TV.webp"
+        "name": "Reloj Deportivo Garmin",
+        "description": "Reloj con GPS, resistente al agua, ideal para deportes al aire libre",
+        "price": 350000,
+        "category": "Fitness",
+        "url": "https://i.imgur.com/xOtDWbL.jpg"
     },
     {
         "id": "15",
-        "name": "Drone Pro X",
-        "description": "Drone con cámara 4K y estabilización de 3 ejes",
-        "price": 800000,
-        "category": "Drones",
-        "url": "https://cdn.shopify.com/s/files/1/0062/4364/7543/products/Drone_X_Pro_w_Logo_MAIN_500X500.jpg?v=1633529746"
+        "name": "Cuerda para Saltar Velites",
+        "description": "Cuerda para saltar ajustable, perfecta para entrenamientos de alta intensidad",
+        "price": 30000,
+        "category": "Fitness",
+        "url": "https://i.imgur.com/6qdmv5Z.jpg"
     }
 ]

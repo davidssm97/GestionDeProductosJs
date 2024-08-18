@@ -12,14 +12,15 @@
   --primary-color: #0096d6; /* Azul Glacial */
   --secondary-color: #1e1e1e; /* Negro */
   --background-color: #f5f5f5; /* Blanco */
-  --text-color: #333333; /* Color del texto oscuro */
+  --text-color-light: #e5e5e5; /* Color del texto claro */
+  --text-color-dark: #333333; /* Color del texto oscuro */
   --border-color: #c0c0c0; /* Color plateado */
 }
 
 /* Estilo global del body */
 body {
   background-color: var(--background-color); /* Fondo del body */
-  color: var(--text-color); /* Color del texto */
+  color: var(--text-color-dark); /* Color del texto oscuro por defecto */
   font-family: 'Poppins', sans-serif; /* Fuente del texto */
   height: 100vh; /* Altura completa del viewport */
   display: flex; /* Usar flexbox para centrar contenido */
@@ -54,7 +55,7 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 16px;
-  color: var(--background-color); /* Color del texto en inputs */
+  color: var(--text-color-light); /* Color del texto en inputs */
   transition: border-color 0.3s;
 }
 
@@ -107,7 +108,7 @@ body {
   background-color: var(--secondary-color); /* Fondo más oscuro para el panel */
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-  color: var(--text-color);
+  color: var(--text-color-light); /* Color del texto claro en el panel */
   text-align: center;
 }
 
@@ -149,6 +150,7 @@ body {
   border-radius: 8px;
   text-align: left;
   border: 1px solid var(--border-color);
+  color: var(--text-color-light); /* Color del texto claro para los productos */
 }
 
 /* Estilo para el contenedor de filtros */
@@ -167,7 +169,7 @@ body {
   background-color: var(--secondary-color);
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  color: var(--background-color);
+  color: var(--text-color-light); /* Color del texto claro en los inputs de filtro */
 }
 
 /* Estilo para los botones de filtro */
@@ -207,7 +209,7 @@ body {
   padding: 20px;
   border-radius: 8px;
   text-align: center;
-  color: var(--text-color);
+  color: var(--text-color-light); /* Color del texto claro en los detalles del producto */
   border: 1px solid var(--border-color);
   margin-bottom: 15px;
 }
